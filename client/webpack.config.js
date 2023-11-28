@@ -10,6 +10,7 @@ module.exports = () => {
       main: './src/js/index.js',
       install: './src/js/install.js',
       cards: './src/js/cards.js',
+    },
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -54,5 +55,5 @@ module.exports = () => {
         },
       ],
     },
-  };
+  }
 };
