@@ -1,13 +1,26 @@
 {
-  "name": "Contact",
+  "name": "contact",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
     "start": "webpack --watchAll"
   },
   "author": "2U",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7"
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "workbox-webpack-plugin": "^6.4.2"
   }
 }
