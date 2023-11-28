@@ -2,9 +2,17 @@
 import { openDB } from 'idb';
 
 // TODO: Complete the initDb() function below:
-const initdb = async () => {
-
-};
+const initdb = async () =>
+  openDB('todos', 1, {
+    upgrade(db) {
+      if (db.objectStoreNames.contains('todos')) {
+        console.log('todos database already exists');
+        return;
+      }
+      db.createObjectStore('todos', { keyPath: 'id', autoIncrement: true });
+      console.log('todos database created');
+    },
+  });
 
 
 // TODO: Complete the postDb() function below:
