@@ -9,14 +9,14 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      cards: './src/js/cards.js'
-    },
+      cards: './src/js/cards.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+      },
 
     // TODO: Add the correct output
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-    },
+   
 
     // TODO: Add the correct plugins
     plugins: [
