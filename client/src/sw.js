@@ -3,7 +3,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
-import {ChacheableResponsePlugin} from 'workbox-cacheable-response';
+import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 
 precacheAndRoute(self.__WB_MANIFEST);
 
@@ -17,7 +17,7 @@ registerRoute(
     new StaleWhileRevalidate({
         cacheName: 'static-resources',
         plugins:[
-            new ChacheableResponsePlugin({
+            new CacheableResponsePlugin({
                 statuses [0, 200],
             }),
         ],
@@ -29,7 +29,7 @@ registerRoute(
     new CacheFirst({
         cacheName: 'images',
         plugins: [
-            new ChacheableResponsePlugin({
+            new CacheableResponsePlugin({
                 statuses: [0, 200],
             }),
             new ExpirationPlugin({
